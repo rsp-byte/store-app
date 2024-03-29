@@ -57,14 +57,11 @@ export class Tab1Page {
     if (user) {
       console.log('Inicio de sesión exitoso:', user);
       this.utilidadesService.UUID = user.user.uid  
-      // Si el inicio de sesión es exitoso, navega a la otra pestaña
-      // Por ejemplo, si tienes una ruta llamada '/otra-ruta', puedes navegar a ella así:
       this.router.navigate(['/productos']);
     } else {
       console.error(
         'Inicio de sesión fallido: No se recibió un usuario válido'
       );
-      // Aquí puedes manejar el caso en el que el inicio de sesión fue exitoso pero no se recibió un usuario válido
     }
   }
 
