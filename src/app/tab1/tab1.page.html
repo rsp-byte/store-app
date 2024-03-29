@@ -1,17 +1,34 @@
 <ion-header [translucent]="true">
-  <ion-toolbar>
-    <ion-title>
-      Tab 1
-    </ion-title>
+  <ion-toolbar class="ion-text-center">
+    <ion-title>APP STORE</ion-title>
   </ion-toolbar>
 </ion-header>
 
 <ion-content [fullscreen]="true">
-  <ion-header collapse="condense">
-    <ion-toolbar>
-      <ion-title size="large">Tab 1</ion-title>
+  <ion-header>
+    <ion-toolbar class="ion-text-center" >
+      <ion-title size="large">Registro e ingreso</ion-title>
     </ion-toolbar>
   </ion-header>
-
-  <app-explore-container name="Tab 1 page"></app-explore-container>
 </ion-content>
+
+
+<ion-content>
+  <ion-item>
+    <ion-label position="stacked">Correo electrónico</ion-label>
+    <ion-input type="email" [(ngModel)]="email"></ion-input>
+  </ion-item>
+
+  <ion-item>
+    <ion-label position="stacked">Contraseña</ion-label>
+    <ion-input type="password" [(ngModel)]="password"></ion-input>
+  </ion-item>
+
+  <ion-button expand="block" (click)="login()">Iniciar sesión</ion-button>
+</ion-content>
+
+<ion-header>
+  <ion-toolbar class="ion-text-center" >
+    <ion-button routerLink="/productos" color="secondary">Ingresar como invitado</ion-button>
+  </ion-toolbar>
+</ion-header>
